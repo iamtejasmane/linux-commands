@@ -18,6 +18,12 @@ j down
 k up
 l right
 
+# navigate the text in terms of words
+w moves to the start of the next word
+e moves to the end of the next word
+b moves to the beginning of the word
+
+
 # to set relative line numbers
 set relativenumber
 
@@ -42,13 +48,20 @@ d
 # copy
 y
 
-# paste 
-p 
+# plaste after a line or after a word 
+p
+
 # to paset 4 times
 4p
 
-# to edit 
+# to paste above line or before the word
+P
+
+# To edit 
 c
+
+# to change till the end of the line 
+C
 
 # to replace 
 r
@@ -59,16 +72,26 @@ w
 # to jump backward word by word
 b
 
-# delete a word
+# delete a word from current position in the word.
 dw
+
+# to delete a complete word.
+diw
 
 # delet till end of the line
 d$ 
+D
+
+# to jump to the closing pair of brakets like entities
+%
+
+# to delete till a specific symbol - symbol or character exclusive
+dt*<char>
 
 # delete till start of the line from current word 
 d0
 
-# copy a word when you are middle of the word
+# copy a word when you are middle of the word 
 yiw
 
 # change the word 
@@ -90,11 +113,37 @@ Shift + g
 Shift + v
 
 # to indent the lines
-=
+==
 
 # searching 
 /<keyword>
 n - goes to next word
 N - goes to previous word
 
+# to mark any section to jump to 
+m<char>
+ma
+mg
 
+# to jump to the marked section
+'<char>
+'a
+'g
+'t
+
+# to cetred the current line 
+zz
+
+# to change the all occurrences of a specific character
+:%s/characterToChnage/newCharcter/g
+
+
+# to change occurrences of the selected text 
+select text - v
+:s/oldChar/newChar/g
+
+# to use last executing commad
+.
+
+# vim contains a register that stores the last actions 
+:reg
